@@ -28,7 +28,9 @@ module.exports = function (service) {
                                 'nodeName': host,
                                 'serviceName': serviceName,
                                 'metricName': metricName,
-                                'reading': metrics[metricName]
+                                'reading': metrics[metricName],
+                                'service': service
+
                             });
                         }
                     }

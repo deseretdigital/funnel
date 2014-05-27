@@ -16,7 +16,18 @@ var collect = function (sourcesdotdotdot) {
     };
 
     var asMetricName = function (data, preserveDot) {
-        var name = ['funnel'];
+        var name = [];
+        
+        if(data.service.prefix != undefined)
+        {
+            name.push(data.service.prefix);
+        }
+        else
+        {
+            name.push('funnel');
+            name.push(data.funnel);
+        }
+
         if (data.explicitMetricName) {
             name.push(data.explicitMetricName);
         } else {

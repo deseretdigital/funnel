@@ -54,7 +54,8 @@ module.exports = function (service) {
                                 'nodeName': nodeName,
                                 'metricName': metricName,
                                 'reading': val,
-                                'preserveMetricNameDot': true
+                                'preserveMetricNameDot': true,
+                                'service': service
                             });
 
                         }
@@ -66,6 +67,7 @@ module.exports = function (service) {
                             'metricName': serviceName,
                             'reading': reading,
                             'preserveMetricNameDot': thisService.preserveMetricNameDot,
+                            'service': service
                         });
 
                     }

@@ -11,7 +11,8 @@ module.exports = function (service) {
                     'funnel': 'json',
                     'nodeName': service.name || urlParts.host,
                     'metricName': serviceName,
-                    'reading': reading
+                    'reading': reading,
+                    'service': service
                 });
             }
         });

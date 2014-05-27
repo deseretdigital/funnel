@@ -36,7 +36,8 @@ module.exports = function (service) {
                                     'nodeName': from,
                                     'serviceName': serviceName,
                                     'metricName': perfName,
-                                    'reading': node.services[serviceName].performance_data[perfName]
+                                    'reading': node.services[serviceName].performance_data[perfName],
+                                    'service': service
                                 });
                             }
                         });

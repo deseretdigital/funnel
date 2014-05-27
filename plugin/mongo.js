@@ -13,7 +13,8 @@ module.exports = function (service) {
                     'nodeName': from.replace(/^mongodb:\/\//, ''),
                     'serviceName': serviceName,
                     'metricName': 'count',
-                    'reading': count
+                    'reading': count,
+                    'service': service
                 });
                 if (pending == 0) {
                     conn.close();
@@ -32,7 +33,8 @@ module.exports = function (service) {
                     'nodeName': from.replace(/^mongodb:\/\//, ''),
                     'serviceName': serviceName,
                     'metricName': 'query',
-                    'reading': count
+                    'reading': count,
+                    'service': service
                 });
                 if (pending == 0) {
                     conn.close();
@@ -53,6 +55,7 @@ module.exports = function (service) {
                         'serviceName': serviceName,
                         'metricName': 'aggregate',
                         'reading': thisService.processor(result),
+                        'service': service
                     });
                 }
                 if (pending == 0) {

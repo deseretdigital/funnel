@@ -28,6 +28,7 @@ module.exports = function (service) {
                             'serviceName': sName,
                             'metricName': cmd,
                             'reading': service.services[sName](stdout),
+                            'service': service
                         });
                     });
                 })(sName);
